@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { getMe } from '../service/login.service';
 
 const Navbar: React.FC = () => {
-  const [userId, setUserId] = React.useState(null);
+  const [, setUserId] = React.useState(null);
   const [name, setName] = React.useState(null);
   const [picture, setpicture] = React.useState(null);
   const navigate = useNavigate();

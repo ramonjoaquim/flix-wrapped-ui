@@ -6,7 +6,7 @@ import { checkUploadStatus, uploadCsv, deleteHistory } from "../service/upload.s
 const Upload: React.FC = () => {
   const [isTutorialExpanded, setTutorialExpanded] = useState(true);
   const [fileName, setFileName] = useState<string | null>(null);
-  const [uploadId, setUploadId] = useState<string | null>(null);
+  const [, setUploadId] = useState<string | null>(null);
   const [status, setStatus] = useState<string | null>(null);
   const [uploading, setUploading] = useState(false);
   const [removeInProgress, setRemoveInProgress] = useState(false);
