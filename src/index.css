@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+body {
+  background-color: black;
+}
+
+@keyframes zoomIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .animate-zoomIn {
+    animation: zoomIn 0.7s ease-out forwards;
+  }
+
+
+  /* Para navegadores Webkit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 3px; /* Define a largura da barra de rolagem */
+}
+
+/* Barra de rolagem horizontal */
+::-webkit-scrollbar-horizontal {
+  height: 3px; /* Altura da barra de rolagem horizontal */
+}
+
+
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: #e7000b; /* Cor da parte arrastável na horizontal */
+  border-radius: 4px; /* Arredondar as bordas da barra horizontal */
+  height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e7000b; /* Cor da barra de rolagem */
+  border-radius: 4px; /* Arredonda as bordas da barra de rolagem */
+  height: 3px;
+}
+
+
+::-webkit-scrollbar {
+  width: 3px;   /* Para a barra vertical */
+  height: 3px;  /* Para a barra horizontal */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e7000b;
+  border-radius: 3px;
+}
+
+

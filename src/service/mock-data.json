@@ -1,0 +1,170 @@
+[
+  {
+    "insightType": "MOST_WATCHED_TYPE",
+    "message": "Você assiste mais filmes 🎥 do que séries 📺!",
+    "data": {
+      "movies": 1083,
+      "series": 756
+    }
+  },
+  {
+    "insightType": "MOST_WATCHED_BY_YEAR",
+    "message": "Resumo do consumo por ano",
+    "data": {
+      "yearlyData": [
+        {
+          "year": 2015,
+          "moviesCount": 6,
+          "episodesCount": 85,
+          "moviesTitles": [
+            "That Awkward Moment",
+            "The Ridiculous 6",
+            "Halo 4",
+            "The Nightmare",
+            "Disaster Movie",
+            "The Exorcism of Emily Rose"
+          ],
+          "seriesTitles": [
+            "The Flash: Season 1: Out of Time",
+            "American Horror Story: Murder House: Halloween Part 2"
+           
+           
+          ]
+        },
+        {
+          "year": 2016,
+          "moviesCount": 77,
+          "episodesCount": 647,
+          "moviesTitles": [
+            "Major Payne",
+            "Dark Skies",
+            "Aziz Ansari Live at Madison Square Garden"
+            
+          ],
+          "seriesTitles": [
+            "Orphan Black: Season 2: Governed by Sound Reason and True Religion",
+            "Suits: Season 4: Two in the Knees",
+            "Dexter: Season 1: Dexter",
+            "Unsupervised: Season 1: Rich Girl"
+            
+          ]
+        },
+        {
+          "year": 2017,
+          "moviesCount": 159,
+          "episodesCount": 787,
+          "moviesTitles": [
+            "Unfriended",
+            "The Bad Batch",
+            "Imperial Dreams",
+            "The Numbers Station"
+          ],
+          "seriesTitles": [
+            "Last Chance U: EMCC: Part 2: For My Momma",
+            "Trollhunters: Tales of Arcadia: Part 2: Homecoming"
+          ]
+        },
+        {
+          "year": 2018,
+          "moviesCount": 113,
+          "episodesCount": 808,
+          "moviesTitles": [
+            "Moonlight",
+            "American Heist",
+            "Little Boxes",
+            "Step Sisters",
+            "The Avengers",
+            "ARQ",
+            "Leprechaun",
+            "Hangman",
+            "I Don't Feel at Home in This World Anymore",
+            "Dave Chappelle",
+            "The Warning",
+            "God's Not Dead 2",
+            "Ender's Game",
+            "Wheelman",
+            "Sinister 2",
+            "The Recall",
+            "Without a Paddle"
+          ],
+          "seriesTitles": [
+            
+            "Creeped Out: Season 1: Bravery Badge"
+          ]
+        }
+      
+      ]
+    }
+  },
+  {
+    "insightType": "MOST_WATCHED_SERIES",
+    "message": "Top 5 séries mais assistidas",
+    "data": {
+      "topSeries": [
+        {
+          "urlPoster": "fsdfsf",
+          "title": "Naruto",
+          "episodesCount": 220
+        },
+        {
+          "urlPoster": "fsdfsf",
+          "title": "The Office (U.S.)",
+          "episodesCount": 143
+        },
+        {
+          "urlPoster": "fsdfsf",
+          "title": "The Flash",
+          "episodesCount": 107
+        },
+        {
+          "urlPoster": "fsdfsf",
+          "title": "Naruto Shippuden",
+          "episodesCount": 101
+        },
+        {
+          "urlPoster": "fsdfsf",
+          "title": "Superstore",
+          "episodesCount": 93
+        }
+      ]
+    }
+  },
+  {
+    "insightType": "LAST_WATCHED",
+    "message": "Aqui estão os últimos conteúdos que você assistiu:",
+    "data": {
+      "contentDetails": [
+        {
+          "urlPoster": "fsdfsf",
+          "title": "Meet the Khumalos",
+          "type": "MOVIE",
+          "dateWatched": "13/04/2025"
+        },
+        {
+          "urlPoster": "fsdfsf",
+          "title": "Ride Along 2",
+          "type": "MOVIE",
+          "dateWatched": "12/04/2025"
+        },
+        {
+          "urlPoster": "fsdfsf",
+          "title": "Ghost in the Shell",
+          "type": "MOVIE",
+          "dateWatched": "12/04/2025"
+        },
+        {
+          "urlPoster": "fsdfsf",
+          "title": "The Hunt",
+          "type": "MOVIE",
+          "dateWatched": "12/04/2025"
+        },
+        {
+          "urlPoster": "fsdfsf",
+          "title": "Intuition",
+          "type": "MOVIE",
+          "dateWatched": "10/04/2025"
+        }
+      ]
+    }
+  }
+]
