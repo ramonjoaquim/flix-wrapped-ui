@@ -8,8 +8,8 @@ api.interceptors.response.use(
   response => response,
   error => {
     if (error.response?.status === 401) {
-      localStorage.removeItem('token-flix-wrapped');
-      localStorage.removeItem('userId-flix-wrapped');
+      sessionStorage.removeItem('token-flix-wrapped');
+      sessionStorage.removeItem('userId-flix-wrapped');
       window.location.href = '/';
     }
     console.error(error)

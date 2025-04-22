@@ -12,7 +12,7 @@ const LoginPage: React.FC = () => {
 
   const handleSuccess = async (response: CredentialResponse) => {
     setLoading(true);
-    setErrorMessage(null); // Reset any previous error message
+    setErrorMessage(null); 
     const idToken = response.credential;
 
     if (!idToken) {
@@ -25,7 +25,7 @@ const LoginPage: React.FC = () => {
       const data = await loginWithGoogle(idToken);
 
       if (data.token) {
-        localStorage.setItem("token-flix-wrapped", data.token);
+        sessionStorage.setItem("token-flix-wrapped", data.token);
         navigate("/dashboard");
       } else {
         setErrorMessage("Erro na autenticação. Tente novamente.");
@@ -50,7 +50,6 @@ const LoginPage: React.FC = () => {
           <div
             className="flex items-center text-2xl font-bold text-red-700 cursor-pointer"
             style={{ fontFamily: "Poppins, sans-serif" }}
-            onClick={() => navigate("/dashboard")}
           >
             Flix<span className="ml-2"><TbLetterW size={34} /></span>rapped
           </div>

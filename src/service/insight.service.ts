@@ -8,7 +8,7 @@ export const getInsights = async (
   userId: string,
   includeTitles = false
 ): Promise<InsightResponse[]> => {
-  const token = localStorage.getItem("token-flix-wrapped");
+  const token = sessionStorage.getItem("token-flix-wrapped");
 
   const response = await api.get<InsightResponse[]>(
     `${apiBaseUrl}/insights/${userId}`, 

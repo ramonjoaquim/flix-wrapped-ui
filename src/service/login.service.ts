@@ -22,7 +22,7 @@ export const loginWithGoogle = async (googleToken: string): Promise<any> => {
 };
 
 export const getMe = async (): Promise<any> => {
-  const token = localStorage.getItem("token-flix-wrapped");
+  const token = sessionStorage.getItem("token-flix-wrapped");
 
   const response = await api.get<any>(
     `${apiBaseUrl}/auth/me`,

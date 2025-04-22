@@ -39,7 +39,7 @@ const Upload: React.FC = () => {
     setUploading(true);
     setStatus(null);
 
-    const userIdUserLogged = localStorage.getItem("userId-flix-wrapped") ?? "";
+    const userIdUserLogged = sessionStorage.getItem("userId-flix-wrapped") ?? "";
     try {
       const idUpload = await uploadCsv(file, userIdUserLogged);
       if (idUpload) {
@@ -49,13 +49,14 @@ const Upload: React.FC = () => {
     } catch (err) {
       console.error("Erro no upload:", err);
       setUploading(false);
+      setStatus('ERROR')
     }
   };
 
   const handleRemoveAll = async () => {
     setRemoveInProgress(true);
     setRemoveStatus(null);
-    const userId = localStorage.getItem("userId-flix-wrapped");
+    const userId = sessionStorage.getItem("userId-flix-wrapped");
     if (!userId) {
       setRemoveStatus("Usuário não identificado.");
       setRemoveInProgress(false);
@@ -178,7 +179,7 @@ const Upload: React.FC = () => {
 
           {status === "ERROR" && (
             <p className="text-red-500 text-center mt-4 font-bold">
-              Erro ao processar o arquivo.
+              Erro ao processar o arquivo. Tente novamente.
             </p>
           )}
         </div>

@@ -3,7 +3,7 @@ import api from './api';
 const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
 export const uploadCsv = async (file: File, userId: string): Promise<any> => {
-  const token = localStorage.getItem("token-flix-wrapped");
+  const token = sessionStorage.getItem("token-flix-wrapped");
   const formData = new FormData();
   formData.append("file", file);
   formData.append("userId", userId);
@@ -22,7 +22,7 @@ export const uploadCsv = async (file: File, userId: string): Promise<any> => {
 };
 
 export const checkUploadStatus = async (uploadId: string) => {
-  const token = localStorage.getItem("token-flix-wrapped");
+  const token = sessionStorage.getItem("token-flix-wrapped");
   const response = await api.get(`${apiBaseUrl}/upload/status/${uploadId}`,
     {
       headers: {
@@ -34,7 +34,7 @@ export const checkUploadStatus = async (uploadId: string) => {
 };
 
 export const deleteHistory = async () => {
-  const token = localStorage.getItem("token-flix-wrapped");
+  const token = sessionStorage.getItem("token-flix-wrapped");
   const response = await api.delete(`${apiBaseUrl}/user-history`,
     {
       headers: {

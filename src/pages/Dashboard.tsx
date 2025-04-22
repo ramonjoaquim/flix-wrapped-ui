@@ -74,7 +74,7 @@ const Dashboard: React.FC = () => {
     try {
       setIsLoading(true);
 
-      const userId: any = localStorage.getItem('userId-flix-wrapped');
+      const userId: any = sessionStorage.getItem('userId-flix-wrapped');
 
       const insights: InsightData[] = await getInsights(userId, true);
       // Totais de filmes e séries
@@ -135,7 +135,9 @@ const Dashboard: React.FC = () => {
   };
 
   useEffect(() => {
-    fetchData();
+    setTimeout(() => {
+      fetchData();
+    }, 500);
   }, []);
 
   return (
@@ -275,7 +277,7 @@ const Dashboard: React.FC = () => {
 
                             <div className="flex flex-col items-center justify-center w-full sm:w-30 h-20 bg-neutral-900 rounded-md mb-1 m-1 px-4 py-2">
                               <span className="text-4xl font-bold text-red-900">{item.series}</span>
-                              <span className="ml-2 text-sm font-medium text-white">Séries</span>
+                              <span className="ml-2 text-sm font-medium text-white">Episódios</span>
                             </div>
                           </div>
 

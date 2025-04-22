@@ -11,12 +11,19 @@ const Navbar: React.FC = () => {
   const navigate = useNavigate();
 
   const fetchData = async () => {
+    const token = sessionStorage.getItem('token-flix-wrapped')
+    const userId = sessionStorage.getItem('userId-flix-wrapped')
+    if (!token && !userId) {
+      navigate("/")
+      return;
+    }
+
     const userInfo = await getMe()
     setUserId(userInfo.userId);
     setName(userInfo.name);
     setpicture(userInfo.picture);
 
-    localStorage.setItem('userId-flix-wrapped', userInfo.userId);
+    sessionStorage.setItem('userId-flix-wrapped', userInfo.userId);
   }
 
   useEffect(() => {
@@ -27,7 +34,7 @@ const Navbar: React.FC = () => {
     <nav className="bg-black fixed top-0 left-0 right-0 z-50 px-3 py-2 md:px-6 md:py-4 text-white shadow-lg flex items-center justify-between">
       {/* Logo */}
       <div
-        className="flex items-center text-lg md:text-2xl font-bold text-red-700"
+        className="flex items-center text-lg md:text-2xl font-bold text-red-700 cursor-pointer"
         style={{ fontFamily: "Poppins, sans-serif" }}
         onClick={() => navigate("/dashboard")}
       >
@@ -57,7 +64,8 @@ const Navbar: React.FC = () => {
             className="text-red-500 hover:text-red-400 transition text-sm md:text-base"
             onClick={() => {
               navigate('/')
-              localStorage.removeItem('token-flix-wrapped')
+              sessionStorage.removeItem('token-flix-wrapped')
+              sessionStorage.removeItem('userId-flix-wrapped')
             }}
           />
         </div>
